@@ -1,0 +1,47 @@
+/* TABLET */
+@media (max-width: 1024px) {
+    .contenedor {
+        grid-template-columns: 1fr;
+        grid-template-rows: 70px 100px 1fr 50px;
+        grid-template-areas:
+            "navegacion  "
+            "encabezado"
+            "principal "
+            "pie "
+
+        ;
+    }
+    section {
+        padding: 10px
+    }
+    nav ul,
+    nav {
+        display: flex;
+    }
+    nav ul li a{
+        font-size: 23px;
+        margin: 1px;
+    }
+    nav img{
+        width:18%;
+    }
+
+    #galeria {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .ocultar {
+        display: none;
+    }
+   
+
+}
+
+/* MOVIL */
+@media (max-width: 767px) {
+    #galeria {
+        grid-template-columns: 1fr;
+    }
+    nav ul li a{
+        font-size: 18px;
+    }
+}

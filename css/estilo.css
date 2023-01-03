@@ -1,0 +1,166 @@
+:root {
+  --color-secundario: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  transform: scale(1);
+  transition: transform .50s;
+}
+
+img:hover {
+  transform: scale(1.1);
+  filter: saturate(1.5);
+}
+
+.contenedor {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: 70px 1fr 50px;
+  grid-template-areas: "navegacion encabezado "
+ "navegacion  principal"
+ "navegacion pie";
+}
+
+header {
+  grid-area: encabezado;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #602985;
+  font-size: 30px;
+  font-style: oblique;
+}
+
+nav {
+  grid-area: navegacion;
+  padding: 5px;
+}
+
+nav img {
+  display: block;
+  margin: auto;
+  border-radius: 20px;
+}
+
+nav ul {
+  list-style: none;
+  margin-top: 10px;
+}
+
+nav ul li a {
+  background: #602985;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 25px;
+  font-family: Cambria;
+  font-style: oblique;
+  padding: 10px;
+  margin-bottom: 5px;
+  color: var(--color-secundario);
+  border-radius: 5px;
+}
+
+nav ul li a:hover {
+  background-color: #341449;
+}
+
+main {
+  grid-area: principal;
+}
+
+table {
+  color: #e9a002;
+  background-color: #602985;
+  font-family: Cambria;
+  font-size: 30px;
+  font-style: oblique;
+  text-align: center;
+  margin: 20px;
+  width: 96%;
+}
+
+h2 {
+  font-style: oblique;
+  color: var(--color-secundario);
+  background: #602985;
+  border-radius: 3px;
+}
+
+footer {
+  padding: 10px;
+  grid-area: pie;
+  width: 120px;
+}
+
+#galeria {
+  text-align: center;
+  margin: 1px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+}
+
+#multimedia {
+  text-align: center;
+  margin: 20px;
+  display: grid;
+  grid-template-columns: repeat(1, 1f);
+}
+
+#redes {
+  display: flex;
+}
+
+/* TABLET */
+@media (max-width: 1024px) {
+  .contenedor {
+    grid-template-columns: 1fr;
+    grid-template-rows: 70px 100px 1fr 50px;
+    grid-template-areas: "navegacion  "
+ "encabezado"
+ "principal "
+ "pie ";
+  }
+  section {
+    padding: 10px;
+  }
+  nav ul,
+  nav {
+    display: flex;
+  }
+  nav ul li a {
+    font-size: 23px;
+    margin: 1px;
+  }
+  nav img {
+    width: 18%;
+  }
+  #galeria {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .ocultar {
+    display: none;
+  }
+}
+
+/* MOVIL */
+@media (max-width: 767px) {
+  #galeria {
+    grid-template-columns: 1fr;
+  }
+  nav ul li a {
+    font-size: 18px;
+  }
+}
