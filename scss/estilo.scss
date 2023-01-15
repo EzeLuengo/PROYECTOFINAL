@@ -41,34 +41,64 @@ nav {
     grid-area: navegacion;
     padding: 5px;
     img {
+    grid-area:logo;
     display: block;
     margin: auto;
     border-radius: 20px;
     }
 }
-nav ul {
+  
+  .menu-horizontal{
     list-style: none;
     margin-top: 10px;
-
-    li a {
-        background: $color-primario;
-        display: block;
-        text-align: center;
-        text-decoration: none;
-        text-transform: uppercase;
-        font-size: 25px;
-        font-family: $fuente-principal;
-        font-style: $estilo-fuente;
-        padding: 10px;
-        margin-bottom: 5px;
-        color: var(--color-secundario);
-        border-radius: 5px;
-
-        &:hover {
-            background-color: rgb(52, 20, 73);
-        }
-    }
-}
+  }
+  
+  .menu-horizontal > li > a {
+    background: #602985;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 25px;
+    font-family: Cambria;
+    font-style: oblique;
+    padding: 10px;
+    margin-bottom: 5px;
+    color: var(--color-secundario);
+    border-radius: 5px;
+  }
+  
+  nav ul li a:hover {
+    background-color: #341449;
+  }
+  
+  .menu-vertical{
+    position:absolute;
+    display: none;
+    list-style: none;
+    width: 200px;
+    z-index: 1000;
+  }
+  
+  .menu-horizontal li:hover .menu-vertical{
+    display: block;
+  }
+  
+  .menu-vertical li a{
+    background: #602985;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 25px;
+    font-family: Cambria;
+    font-style: oblique;
+    padding: 10px;
+    margin-bottom: 5px;
+    color: var(--color-secundario);
+    border-radius: 5px;
+  }
+  
 
 main{
     grid-area: principal;
