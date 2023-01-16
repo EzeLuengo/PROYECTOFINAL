@@ -27,6 +27,7 @@ img:hover {
   max-width: 1200px;
   margin: auto;
   display: grid;
+  min-width: 250px;
   grid-template-columns: 20% 80%;
   grid-template-rows: 70px 1fr 50px;
   grid-template-areas: "navegacion encabezado "
@@ -53,7 +54,7 @@ nav img {
   grid-area:logo;
   display: block;
   margin: auto;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 .menu-horizontal{
@@ -71,7 +72,7 @@ nav img {
   font-family: Cambria;
   font-style: oblique;
   padding: 10px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   color: var(--color-secundario);
   border-radius: 5px;
 }
@@ -166,15 +167,15 @@ footer {
     "pie ";
   }
   section {
-    padding: 1px;
+    padding: 2px;
   }
   nav ul,
   nav {
     display: flex;
   }
-  nav ul li a {
-    font-size: 100%;
+  .menu-horizontal {
     margin: 5px;
+    width: 100%;
   }
   nav img {
     width: 18%;
@@ -182,18 +183,15 @@ footer {
   #galeria {
     grid-template-columns: repeat(2, 1fr);
   }
-  .ocultar {
-    display: none;
-  }
 }
 
 /* MOVIL */
-@media (max-width: 767px) {
+@media (max-width: 700px) {
   #galeria {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(1, 1fr);
 }
-nav ul li a {
-  font-size: 25px;
-  margin: 3px;
+.menu-horizontal {
+  margin: 1px;
+  width: 100%;
 }
 }
